@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <p>Tipe DNA Di Soal = <input id="ti" placeholder="Type The DNA Type"><br />
+        Untai DNA Di Soal =   <input id="dn" placeholder="Type The DNA">
+        </p>
+        <button onclick="hi();">Calculate!</button>
+        <script>function hi() {
+            var tip = document.getElementById("ti").value;
+            var dna = document.getElementById("dn").value;
+            var tipp = tip
+            var dnaa = dna
+            if (tip == "coding"||tip == "sense"||tip == "nontemplate"){var tipe="1"}
+            else if (tip == "anticoding"||tip == "antisense"||tip == "template"){var tipe="2"}
+            else if (tip == "kodon"){var tipe="3"}
+            else if (tip == "antikodon"){var tipe="4"}
+            else {tipe="69"}
+            
+            if (tipe == "2"){
+                var dna = dna.replace("T","a")
+                var dna = dna.replace("A","T")
+                var dna = dna.replace("a","A")
+                var dna = dna.replace("C","g")
+                var dna = dna.replace("G","C")
+                var dna = dna.replace("g","G")
+                var dna = dna.replace("3","0")
+                var dna = dna.replace("5","3")
+                var dna = dna.replace("0","5")
+            } else if (tipe == "3"){
+                var dna = dna.replace("U","T")
+            } else if (tipe == "4"){
+                var dna = dna.replace("U","T")
+                var dna = dna.replace("T","a")
+                var dna = dna.replace("A","T")
+                var dna = dna.replace("a","A")
+                var dna = dna.replace("C","g")
+                var dna = dna.replace("G","C")
+                var dna = dna.replace("g","G")
+                var dna = dna.replace("3","0")
+                var dna = dna.replace("5","3")
+                var dna = dna.replace("0","5")
+            } else if (tipe =="69"){
+                alert("Tipe DNA Yang Dimasukkan Salah!")
+                var dna = "¿error?"
+                } 
+            var dnaS = dna
+            var dnaNT = dna
+            var dnaC = dna
+            var dnaK = dna.replace("T","U")
+            var dnaAK = dnaK.replace("U","a")
+            var dnaAK = dnaAK.replace("A","U")
+            var dnaAK = dnaAK.replace("a","A")
+            var dnaAK = dnaAK.replace("G","c")
+            var dnaAK = dnaAK.replace("C","G")
+            var dnaAK = dnaAK.replace("c","C")
+            var dnaAK = dnaAK.replace("3","0")
+            var dnaAK = dnaAK.replace("5","3")
+            var dnaAK = dnaAK.replace("0","5")
+            var dnaAS = dna.replace("T","a")
+            var dnaAS = dnaAS.replace("A","T")
+            var dnaAS = dnaAS.replace("a","A")
+            var dnaAS = dnaAS.replace("G","c")
+            var dnaAS = dnaAS.replace("C","G")
+            var dnaAS = dnaAS.replace("c","C")
+            var dnaAS = dnaAS.replace("3","0")
+            var dnaAS = dnaAS.replace("5","3")
+            var dnaAS = dnaAS.replace("0","5")
+            var dnaT = dnaAS
+            var dnaAC = dnaAS
+            document.write
+            ("<big><b>Jawaban : </b></big><br /><hr><b>Coding = </b>")
+            document.write(dnaC)
+            document.write("<br /><b>AntiCoding = </b>")
+            document.write(dnaAC)
+            document.write("<br /><b>Sense = </b>")
+            document.write(dnaS)
+            document.write("<br /><b>AntiSense = </b>")
+            document.write(dnaAS)
+            document.write("<br /><b>Template = </b>")
+            document.write(dnaT)
+            document.write("<br /><b>NonTemplate = </b>")
+            document.write(dnaNT)
+            document.write("<br /><b>Kodon = </b>")
+            document.write(dnaK)
+            document.write("<br /><b>AntiKodon = </b>")
+            document.write(dnaAK)
+            }
+            </script>
+    </body>
+</html>
